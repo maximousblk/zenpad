@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         <title>ZenPad</title>
         <link
             rel="stylesheet"
@@ -33,9 +34,54 @@
         </style>
     </head>
     <body contenteditable>
-        <textarea></textarea>
+        <textarea id="yin"></textarea>
+        <script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
         <script>
-            document.querySelector("textarea").focus();
+            if (!localStorage.getItem("yang")) {
+                localStorage.setItem(
+                    "yang",
+                    "ZenPad - as zen as it gets...\n\n# Features:\n  => Ligatures\n  => Persistence\n  => Spelcheck\n\n~ Made by Maximous Black (@maximousblk)"
+                );
+            }
+
+            var textarea = document.getElementById("yin");
+            textarea.addEventListener("input", writeLocalStorage);
+            textarea.focus();
+
+            function writeLocalStorage() {
+                if (typeof Storage !== "undefined") {
+                    localStorage.setItem("yang", textarea.value);
+                } else {
+                    console.log("Localstorage not supported");
+                }
+            }
+
+            function readLocalStorage() {
+                if (typeof Storage !== "undefined") {
+                    textarea.value = localStorage.getItem("yang");
+                } else {
+                    console.log("Localstorage not supported");
+                }
+            }
+
+            function purgeLocalStorage() {
+                if (typeof Storage !== "undefined") {
+                    console.clear();
+                    localStorage.clear();
+                    readLocalStorage();
+                    console.log("Pfff... gone.");
+                } else {
+                    console.log("Localstorage not supported");
+                }
+            }
+
+            // `DOMContentLoaded` may fire before the script has a chance to run, so check before adding a listener
+            if (document.readyState === "loading") {
+                document.addEventListener("DOMContentLoaded", readLocalStorage);
+            } else {
+                // `DOMContentLoaded` already fired
+                readLocalStorage();
+            }
         </script>
     </body>
 </html>
