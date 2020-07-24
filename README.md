@@ -9,6 +9,7 @@ As _zen_ as it gets
 - Ligatures using [JetBrains Mono](https://www.jetbrains.com/lp/mono/) font
 - Persistence using localStorage
 - Spellcheck using your browser
+- Auto-Indentation through a regular expression and a few DOM events
 
 ## License
 
