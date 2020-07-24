@@ -111,11 +111,10 @@
         if (ev.keyCode === 13) {
           textarea.setRangeText(prevIndent);
           textarea.selectionStart = textarea.selectionEnd + prevIndent.length;
+          writeLocalStorage();
         } else {
           updateIndents();
         }
-
-        writeLocalStorage();
       }
 
       function getIndents() {
