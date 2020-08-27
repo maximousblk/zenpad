@@ -1,6 +1,5 @@
 * {
   margin: 0;
-  font-size: 20px;
   font-family: "JetBrains Mono", "JetBrainsMono", "Courier New", Courier,
     monospace;
 }
@@ -13,29 +12,15 @@ body {
 }
 
 .CodeMirror {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100vw;
-  height: 100vh !important;
-  padding: 2vw;
-  border: none;
-  outline: none;
-}
-
-textarea {
-  width: 100%;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 5%;
-  box-sizing: border-box;
-  font-size: 24px;
-  font-family: "JetBrains Mono", "JetBrainsMono", "Courier New", Courier,
-    monospace;
-  border: 2px #000;
+  width: 98vw;
+  height: 98vh !important;
+  padding: 2vw;
+  border: none;
   outline: none;
+  font-size: 24px;
 }

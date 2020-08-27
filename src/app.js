@@ -3,6 +3,10 @@ import hotkeys from "hotkeys-js";
 const CodeMirror = require("codemirror");
 require("codemirror/mode/gfm/gfm");
 require("codemirror/mode/javascript/javascript");
+require("codemirror/mode/shell/shell");
+require("codemirror/mode/yaml/yaml");
+require("codemirror/mode/css/css");
+require("codemirror/mode/yaml-frontmatter/yaml-frontmatter");
 require("./style.css");
 
 const defaultText = `ZenPad - as zen as it gets...
@@ -21,7 +25,7 @@ const defaultText = `ZenPad - as zen as it gets...
 const yin = CodeMirror.fromTextArea(document.getElementById("yin"), {
   lineNumbers: false,
   indentWithTabs: false,
-  mode: "gfm",
+  mode: "yaml-frontmatter",
   gitHubSpice: true,
   theme: "dracula",
   styleActiveLines: true,
@@ -29,6 +33,7 @@ const yin = CodeMirror.fromTextArea(document.getElementById("yin"), {
   matchBrackets: true,
   lineWrapping: true,
   autofocus: true,
+  scrollbarStyle: "null"
 });
 
 if (!localStorage.getItem("yang")) {
