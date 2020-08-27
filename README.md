@@ -6,13 +6,15 @@ As _zen_ as it gets
 
 ## Features:
 
-- Ligatures using [JetBrains Mono](https://www.jetbrains.com/lp/mono/) font
-- Persistence using localStorage
-- Spellcheck using your browser
-- Auto-Indentation through a regular expression and a few DOM events
+- Ligatures
+- Persistence
+- Save to file
+- Auto Indentation
+- Syntax Highlighting
+- GitHub Flavoured Markdown
 
 ## License
 
 [![LICENSE](https://img.shields.io/github/license/maximousblk/zenpad?style=for-the-badge)](LICENSE)
 
-To the extent possible under law, Maximous Black has waived all copyright and related or neighboring rights to Piracy. This work is published from: India.
+ZenPad is distributed under [The MIT License](LICENSE)
