@@ -8,11 +8,13 @@
   "private": true,
   "scripts": {
     "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html -t browser -d public --no-content-hash --experimental-scope-hoisting --no-source-maps"
+    "build": "parcel build src/index.html -t browser -d public --no-content-hash --experimental-scope-hoisting --no-source-maps",
+    "fmt": "prettier --write ."
   },
   "dependencies": {
     "codemirror": "^5.57.0",
-    "hotkeys-js": "^3.8.1"
+    "hotkeys-js": "^3.8.1",
+    "prettier": "^2.1.1"
   },
   "devDependencies": {
     "parcel": "^1.12.4"

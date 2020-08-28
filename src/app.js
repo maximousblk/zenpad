@@ -1,4 +1,5 @@
 import hotkeys from "hotkeys-js";
+import prettier from "prettier";
 
 const CodeMirror = require("codemirror");
 require("codemirror/mode/gfm/gfm");
@@ -33,7 +34,7 @@ const yin = CodeMirror.fromTextArea(document.getElementById("yin"), {
   matchBrackets: true,
   lineWrapping: true,
   autofocus: true,
-  scrollbarStyle: "null"
+  scrollbarStyle: "null",
 });
 
 if (!localStorage.getItem("yang")) {
@@ -50,7 +51,7 @@ if (document.readyState === "loading") {
 
 function writeLocalStorage() {
   if (typeof Storage !== "undefined") {
-    localStorage.setItem("yang", yin.getValue());
+    localStorage.setItem("yang", prettier.format(yin.getValue()));
   } else {
     console.log("Localstorage not supported");
   }
