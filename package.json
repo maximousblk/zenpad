@@ -11,7 +11,7 @@
     "build": "parcel build src/index.html -t browser -d public --no-content-hash --experimental-scope-hoisting --no-source-maps"
   },
   "dependencies": {
-    "codemirror": "^5.57.0",
+    "codemirror": "^5.58.2",
     "hotkeys-js": "^3.8.1"
   },
   "devDependencies": {
